@@ -1,0 +1,13 @@
+{
+  "name" : "Иван",
+  "age" : 37,
+  "is_student" : true,
+  "courses" : [
+    "QA","AT",
+    {
+      "name" : "Aliase"
+    }
+
+
+  ]
+}
