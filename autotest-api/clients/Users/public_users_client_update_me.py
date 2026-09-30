@@ -18,11 +18,12 @@ class CreateUserRequest(TypedDict):
 class PublicUsersClient(APIClient):
     def create_user_api(self, request: CreateUserRequest) -> Response:
 
-        return self.post("http://localhost:8000/api/v1/users", json=request)
+        return self.post("/api/v1/users", json=request)
+
 
 http_client = Client()
 client = PublicUsersClient(client=http_client)
-response= client.create_user_api({"email": "u1ser@example.com",
+response= client.create_user_api({"email": "u1s2er@example.com",
   "password": "st11ring",
   "lastName": "string",
   "firstName": "string",

@@ -5,8 +5,9 @@ from httpx._types import RequestData, RequestFiles
 
 
 class APIClient():
-    def __init__(self, client:Client):
+    def __init__(self, client:Client, base_url: str = "http://localhost:8000"):
         self.client = client
+        self.client.base_url = base_url
 
     """
     Базовый API клиент, принимающий объект httpx.Client.
